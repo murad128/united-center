@@ -2,16 +2,16 @@
   "contact": {
     "phone": "+994 50 204 64 30",
     "phoneRaw": "+994502046430",
-    "address": "SÉttar BÉhlulzadÉ 157",
+    "address": "SÃÂttar BÃÂhlulzadÃÂ 157",
     "whatsapp": "994502046430",
     "email": "info@unitedcenter.az",
-    "hoursWeekday": "09:00 â 18:00",
-    "hoursSaturday": "09:00 â 18:00"
+    "hoursWeekday": "09:00 Ã¢ÂÂ 18:00",
+    "hoursSaturday": "09:00 Ã¢ÂÂ 18:00"
   },
   "hero": {
-    "title": "UÅaÄÄ±nÄ±zÄ±n potensialÄ±nÄ±",
-    "titleSpan": "birlikdÉ aÃ§aq",
-    "subtitle": "United Center-dÉ hÉr uÅaq xÃ¼susidir. Autizm dÉstÉyi, nitq terapiyasÄ±, psixoloji yardÄ±m vÉ fÉrdi inkiÅaf proqramlarÄ± ilÉ yanÄ±nÄ±zdayÄ±q."
+    "title": "UÃÂaÃÂÃÂ±nÃÂ±zÃÂ±n potensialÃÂ±nÃÂ±",
+    "titleSpan": "birlikdÃÂ aÃÂ§aq",
+    "subtitle": "United Center-dÃÂ hÃÂr uÃÂaq xÃÂ¼susidir. Autizm dÃÂstÃÂyi, nitq terapiyasÃÂ±, psixoloji yardÃÂ±m vÃÂ fÃÂrdi inkiÃÂaf proqramlarÃÂ± ilÃÂ yanÃÂ±nÃÂ±zdayÃÂ±q."
   },
   "stats": {
     "children": "100",
@@ -25,42 +25,42 @@
   },
   "team": [
     {
-      "name": "Dr. Aynur MÉmmÉdova",
-      "role": "BaÅ Psixoloq",
-      "desc": "UÅaq psixologiyasÄ± Ã¼zrÉ 10 il tÉcrÃ¼bÉsi. ABA metodologiyasÄ±nda sertifikatlÄ±.",
+      "name": "Dr. Aynur MÃÂmmÃÂdova",
+      "role": "BaÃÂ Psixoloq",
+      "desc": "UÃÂaq psixologiyasÃÂ± ÃÂ¼zrÃÂ 10 il tÃÂcrÃÂ¼bÃÂsi. ABA metodologiyasÃÂ±nda sertifikatlÃÂ±.",
       "initials": "AM",
       "color1": "#17B8A6",
       "color2": "#0fa090"
     },
     {
-      "name": "GÃ¼lnar Æliyeva",
+      "name": "GÃÂ¼lnar ÃÂliyeva",
       "role": "Nitq Terapevti / Loqoped",
-      "desc": "Nitq pozuntularÄ± vÉ autizmlÉ ÉlaqÉli kommunikasiya Ã§ÉtinliklÉrini aradan qaldÄ±rÄ±r.",
-      "initials": "GÆ",
+      "desc": "Nitq pozuntularÃÂ± vÃÂ autizmlÃÂ ÃÂlaqÃÂli kommunikasiya ÃÂ§ÃÂtinliklÃÂrini aradan qaldÃÂ±rÃÂ±r.",
+      "initials": "GÃÂ",
       "color1": "#4CAF50",
       "color2": "#388e3c"
     },
     {
-      "name": "Nigar HÃ¼seynova",
-      "role": "XÃ¼susi MÃ¼Éllim",
-      "desc": "XÃ¼susi tÉhsil ehtiyacÄ± olan uÅaqlar Ã¼Ã§Ã¼n fÉrdi Ã¶yrÉnmÉ proqramlarÄ± hazÄ±rlayÄ±r.",
+      "name": "Nigar HÃÂ¼seynova",
+      "role": "XÃÂ¼susi MÃÂ¼ÃÂllim",
+      "desc": "XÃÂ¼susi tÃÂhsil ehtiyacÃÂ± olan uÃÂaqlar ÃÂ¼ÃÂ§ÃÂ¼n fÃÂrdi ÃÂ¶yrÃÂnmÃÂ proqramlarÃÂ± hazÃÂ±rlayÃÂ±r.",
       "initials": "NH",
       "color1": "#f6a800",
       "color2": "#e69400"
     },
     {
       "name": "Rauf Quliyev",
-      "role": "DavranÄ±Å MÃ¼tÉxÉssisi",
-      "desc": "ABA ÉsaslÄ± davranÄ±Å terapiyasÄ± Ã¼zrÉ BCBA sertifikatlÄ±. MÃ¼sbÉt davranÄ±Å dÉstÉyi.",
+      "role": "DavranÃÂ±ÃÂ MÃÂ¼tÃÂxÃÂssisi",
+      "desc": "ABA ÃÂsaslÃÂ± davranÃÂ±ÃÂ terapiyasÃÂ± ÃÂ¼zrÃÂ BCBA sertifikatlÃÂ±. MÃÂ¼sbÃÂt davranÃÂ±ÃÂ dÃÂstÃÂyi.",
       "initials": "RQ",
       "color1": "#7c3aed",
       "color2": "#5b21b6"
     },
     {
-      "name": "Sevinc Ä°smayÄ±lova",
-      "role": "UÅaq Ä°nkiÅaf MÃ¼tÉxÉssisi",
-      "desc": "ErkÉn uÅaqlÄ±q inkiÅafÄ± Ã¼zrÉ ixtisaslaÅmÄ±Å. Oyun terapiyasÄ± vÉ motor inkiÅaf.",
-      "initials": "SÄ°",
+      "name": "Sevinc ÃÂ°smayÃÂ±lova",
+      "role": "UÃÂaq ÃÂ°nkiÃÂaf MÃÂ¼tÃÂxÃÂssisi",
+      "desc": "ErkÃÂn uÃÂaqlÃÂ±q inkiÃÂafÃÂ± ÃÂ¼zrÃÂ ixtisaslaÃÂmÃÂ±ÃÂ. Oyun terapiyasÃÂ± vÃÂ motor inkiÃÂaf.",
+      "initials": "SÃÂ°",
       "color1": "#ec4899",
       "color2": "#be185d"
     },
@@ -71,86 +71,78 @@
       "initials": "UB",
       "color1": "#17B8A6",
       "color2": "#0fa090"
-    },
-    {
-      "name": "",
-      "role": "",
-      "desc": "",
-      "initials": "",
-      "color1": "#17B8A6",
-      "color2": "#0fa090"
     }
   ],
   "services": [
     {
-      "icon": "ð§©",
-      "name": "Autizm DÉstÉyi",
-      "desc": "Autizm spektr pozuntusu olan uÅaqlar Ã¼Ã§Ã¼n fÉrdilÉÅdirilmiÅ rehabilitasiya proqramlarÄ±. ErkÉn mÃ¼daxilÉ ilÉ daha sÃ¼rÉtli nÉticÉ."
+      "icon": "Ã°ÂÂ§Â©",
+      "name": "Autizm DÃÂstÃÂyi",
+      "desc": "Autizm spektr pozuntusu olan uÃÂaqlar ÃÂ¼ÃÂ§ÃÂ¼n fÃÂrdilÃÂÃÂdirilmiÃÂ rehabilitasiya proqramlarÃÂ±. ErkÃÂn mÃÂ¼daxilÃÂ ilÃÂ daha sÃÂ¼rÃÂtli nÃÂticÃÂ."
     },
     {
-      "icon": "ð£ï¸",
-      "name": "Nitq TerapiyasÄ±",
-      "desc": "PeÅÉkar loqoped mÃ¼tÉxÉssislÉrimiz ilÉ nitq inkiÅafÄ±, dil bacarÄ±qlarÄ± vÉ Ã¼nsiyyÉt qabiliyyÉtinin gÃ¼clÉndirilmÉsi."
+      "icon": "Ã°ÂÂÂ£Ã¯Â¸Â",
+      "name": "Nitq TerapiyasÃÂ±",
+      "desc": "PeÃÂÃÂkar loqoped mÃÂ¼tÃÂxÃÂssislÃÂrimiz ilÃÂ nitq inkiÃÂafÃÂ±, dil bacarÃÂ±qlarÃÂ± vÃÂ ÃÂ¼nsiyyÃÂt qabiliyyÃÂtinin gÃÂ¼clÃÂndirilmÃÂsi."
     },
     {
-      "icon": "ð§",
-      "name": "Psixoloji DÉstÉk",
-      "desc": "UÅaq psixoloqlarÄ±mÄ±z tÉrÉfindÉn emosional inkiÅaf, davranÄ±Å tÉnzimlÉnmÉsi vÉ sosial bacarÄ±qlarÄ±n formalaÅdÄ±rÄ±lmasÄ±."
+      "icon": "Ã°ÂÂ§",
+      "name": "Psixoloji DÃÂstÃÂk",
+      "desc": "UÃÂaq psixoloqlarÃÂ±mÃÂ±z tÃÂrÃÂfindÃÂn emosional inkiÃÂaf, davranÃÂ±ÃÂ tÃÂnzimlÃÂnmÃÂsi vÃÂ sosial bacarÃÂ±qlarÃÂ±n formalaÃÂdÃÂ±rÃÂ±lmasÃÂ±."
     },
     {
-      "icon": "ð",
-      "name": "XÃ¼susi TÉhsil",
-      "desc": "HÉr uÅaÄÄ±n Ã¶yrÉnmÉ tempinÉ uyÄun fÉrdi Ã¶yrÉnmÉ planlarÄ± ilÉ akademik vÉ kognitiv inkiÅafÄ±n dÉstÉklÉnmÉsi."
+      "icon": "Ã°ÂÂÂ",
+      "name": "XÃÂ¼susi TÃÂhsil",
+      "desc": "HÃÂr uÃÂaÃÂÃÂ±n ÃÂ¶yrÃÂnmÃÂ tempinÃÂ uyÃÂun fÃÂrdi ÃÂ¶yrÃÂnmÃÂ planlarÃÂ± ilÃÂ akademik vÃÂ kognitiv inkiÃÂafÃÂ±n dÃÂstÃÂklÃÂnmÃÂsi."
     },
     {
-      "icon": "ð±",
-      "name": "UÅaq Ä°nkiÅafÄ±",
-      "desc": "Motor bacarÄ±qlar, oyun terapiyasÄ± vÉ hÉyat bacarÄ±qlarÄ±nÄ± ÉhatÉ edÉn kompleks inkiÅaf proqramlarÄ±."
+      "icon": "Ã°ÂÂÂ±",
+      "name": "UÃÂaq ÃÂ°nkiÃÂafÃÂ±",
+      "desc": "Motor bacarÃÂ±qlar, oyun terapiyasÃÂ± vÃÂ hÃÂyat bacarÃÂ±qlarÃÂ±nÃÂ± ÃÂhatÃÂ edÃÂn kompleks inkiÃÂaf proqramlarÃÂ±."
     },
     {
-      "icon": "ð¯",
-      "name": "DavranÄ±Å TerapiyasÄ±",
-      "desc": "ABA (TÉtbiqi DavranÄ±Å Analizi) ÉsaslÄ± yanaÅma ilÉ istÉnilmayan davranÄ±ÅlarÄ±n azaldÄ±lmasÄ±, mÃ¼sbÉt davranÄ±ÅlarÄ±n mÃ¶hkÉmlÉndirilmÉsi."
+      "icon": "Ã°ÂÂÂ¯",
+      "name": "DavranÃÂ±ÃÂ TerapiyasÃÂ±",
+      "desc": "ABA (TÃÂtbiqi DavranÃÂ±ÃÂ Analizi) ÃÂsaslÃÂ± yanaÃÂma ilÃÂ istÃÂnilmayan davranÃÂ±ÃÂlarÃÂ±n azaldÃÂ±lmasÃÂ±, mÃÂ¼sbÃÂt davranÃÂ±ÃÂlarÃÂ±n mÃÂ¶hkÃÂmlÃÂndirilmÃÂsi."
     },
     {
-      "icon": "ð¤²",
-      "name": "Sensor Ä°nteqrasiya",
-      "desc": "Hiss sisteminin inkiÅafÄ±nÄ± dÉstÉklÉyÉn terapiya ilÉ toxunma, hÉrÉkÉt vÉ proprioseptiv sistemin harmoniyasÄ±."
+      "icon": "Ã°ÂÂ¤Â²",
+      "name": "Sensor ÃÂ°nteqrasiya",
+      "desc": "Hiss sisteminin inkiÃÂafÃÂ±nÃÂ± dÃÂstÃÂklÃÂyÃÂn terapiya ilÃÂ toxunma, hÃÂrÃÂkÃÂt vÃÂ proprioseptiv sistemin harmoniyasÃÂ±."
     },
     {
-      "icon": "ð¨âð©âð§",
-      "name": "Valideyn KonsultasiyasÄ±",
-      "desc": "EvdÉ terapiyanÄ± davam etdirmÉk Ã¼Ã§Ã¼n valideynlÉrÉ strateji mÉslÉhÉtlÉr, aylÄ±q irÉlilÉyiÅ mÃ¼zakirÉsi."
+      "icon": "Ã°ÂÂÂ¨Ã¢ÂÂÃ°ÂÂÂ©Ã¢ÂÂÃ°ÂÂÂ§",
+      "name": "Valideyn KonsultasiyasÃÂ±",
+      "desc": "EvdÃÂ terapiyanÃÂ± davam etdirmÃÂk ÃÂ¼ÃÂ§ÃÂ¼n valideynlÃÂrÃÂ strateji mÃÂslÃÂhÃÂtlÃÂr, aylÃÂ±q irÃÂlilÃÂyiÃÂ mÃÂ¼zakirÃÂsi."
     },
     {
-      "icon": "ð",
-      "name": "FÉrdi Proqramlar",
-      "desc": "QiymÉtlÉndirmÉ nÉticÉsinÉ ÉsasÉn hÉr uÅaq Ã¼Ã§Ã¼n hazÄ±rlanmÄ±Å xÃ¼susi inkiÅaf planÄ± â unikal, Ã¶lÃ§Ã¼lmÃ¼Å, effektiv."
+      "icon": "Ã°ÂÂÂ",
+      "name": "FÃÂrdi Proqramlar",
+      "desc": "QiymÃÂtlÃÂndirmÃÂ nÃÂticÃÂsinÃÂ ÃÂsasÃÂn hÃÂr uÃÂaq ÃÂ¼ÃÂ§ÃÂ¼n hazÃÂ±rlanmÃÂ±ÃÂ xÃÂ¼susi inkiÃÂaf planÃÂ± Ã¢ÂÂ unikal, ÃÂ¶lÃÂ§ÃÂ¼lmÃÂ¼ÃÂ, effektiv."
     }
   ],
   "testimonials": [
     {
-      "name": "Leyla HÃ¼seynova",
-      "info": "4 yaÅlÄ± Ælinin anasÄ±",
+      "name": "Leyla HÃÂ¼seynova",
+      "info": "4 yaÃÂlÃÂ± ÃÂlinin anasÃÂ±",
       "initials": "LH",
       "color": "#17B8A6",
-      "text": "OÄlum 3 yaÅÄ±nda United Center-É gÉldi. Ä°lk gÃ¼n bir kÉlmÉ belÉ danÄ±ÅmÄ±rdÄ±. 8 aylÄ±q nitq terapiyasÄ±ndan sonra artÄ±q cÃ¼mlÉ qurur, dostlarÄ± ilÉ oynayÄ±r. Bu mÃ¶cÃ¼zÉni yaradanlara sonsuz minnÉtdaram.",
+      "text": "OÃÂlum 3 yaÃÂÃÂ±nda United Center-ÃÂ gÃÂldi. ÃÂ°lk gÃÂ¼n bir kÃÂlmÃÂ belÃÂ danÃÂ±ÃÂmÃÂ±rdÃÂ±. 8 aylÃÂ±q nitq terapiyasÃÂ±ndan sonra artÃÂ±q cÃÂ¼mlÃÂ qurur, dostlarÃÂ± ilÃÂ oynayÃÂ±r. Bu mÃÂ¶cÃÂ¼zÃÂni yaradanlara sonsuz minnÃÂtdaram.",
       "stars": 5
     },
     {
-      "name": "NÉrmin MÉmmÉdzadÉ",
-      "info": "5 yaÅlÄ± GÃ¼nayÄ±n anasÄ±",
+      "name": "NÃÂrmin MÃÂmmÃÂdzadÃÂ",
+      "info": "5 yaÃÂlÃÂ± GÃÂ¼nayÃÂ±n anasÃÂ±",
       "initials": "NM",
       "color": "#4CAF50",
-      "text": "QÄ±zÄ±mÄ±n autizm diaqnozu aldÄ±ÄÄ±nda Ã§ox Ã§aÅdÄ±q. United Center-dÉki komanda bizi saatlarla dinlÉdi, izah etdi, plan hazÄ±rladÄ±. Ä°ndi qÄ±zÄ±m mÉktÉbÉ hazÄ±rdÄ±r. Bu nailiyyÉti ailÉ kimi birlikdÉ qazandÄ±q.",
+      "text": "QÃÂ±zÃÂ±mÃÂ±n autizm diaqnozu aldÃÂ±ÃÂÃÂ±nda ÃÂ§ox ÃÂ§aÃÂdÃÂ±q. United Center-dÃÂki komanda bizi saatlarla dinlÃÂdi, izah etdi, plan hazÃÂ±rladÃÂ±. ÃÂ°ndi qÃÂ±zÃÂ±m mÃÂktÃÂbÃÂ hazÃÂ±rdÃÂ±r. Bu nailiyyÃÂti ailÃÂ kimi birlikdÃÂ qazandÃÂ±q.",
       "stars": 5
     },
     {
-      "name": "Rauf Æliyev",
-      "info": "6 yaÅlÄ± TuranÄ±n atasÄ±",
-      "initials": "RÆ",
+      "name": "Rauf ÃÂliyev",
+      "info": "6 yaÃÂlÃÂ± TuranÃÂ±n atasÃÂ±",
+      "initials": "RÃÂ",
       "color": "#7c3aed",
-      "text": "Valideyn konsultasiyalarÄ± sayÉsindÉ evdÉ dÉ terapiyanÄ± davam etdirÉ bildim. MÃ¼tÉxÉssislÉr hÉmiÅÉ ÉlÃ§atandÄ±r, suallarÄ±ma anÄ±nda cavab verirlÉr. United Center sadÉcÉ mÉrkÉz deyil â ailÉnin bir hissÉsidir.",
+      "text": "Valideyn konsultasiyalarÃÂ± sayÃÂsindÃÂ evdÃÂ dÃÂ terapiyanÃÂ± davam etdirÃÂ bildim. MÃÂ¼tÃÂxÃÂssislÃÂr hÃÂmiÃÂÃÂ ÃÂlÃÂ§atandÃÂ±r, suallarÃÂ±ma anÃÂ±nda cavab verirlÃÂr. United Center sadÃÂcÃÂ mÃÂrkÃÂz deyil Ã¢ÂÂ ailÃÂnin bir hissÃÂsidir.",
       "stars": 5
     },
     {
