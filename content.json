@@ -2,21 +2,16 @@
   "contact": {
     "phone": "+994 50 204 64 30",
     "phoneRaw": "+994502046430",
-    "address": "Səttar Bəhlulzadə 157",
+    "address": "SÉttar BÉhlulzadÉ 157",
     "whatsapp": "994502046430",
     "email": "info@unitedcenter.az",
-    "hoursWeekday": "09:00 – 18:00",
-    "hoursSaturday": "09:00 – 14:00"
+    "hoursWeekday": "09:00 â 18:00",
+    "hoursSaturday": "09:00 â 14:00"
   },
   "hero": {
-    "title": "Uşağınızın potensialını",
-    "titleSpan": "birlikdə açaq",
-    "subtitle": "United Center-də hər uşaq xüsusidir. Autizm dəstəyi, nitq terapiyası, psixoloji yardım və fərdi inkişaf proqramları ilə yanınızdayıq."
-  },
-  "about": {
-    "p1": "United Center Reabilitasiya və İnkişaf Mərkəzi, autizm spektr pozuntusu olan uşaqlar da daxil olmaqla, müxtəlif inkişaf ehtiyacları olan uşaqlara hərtərəfli dəstək göstərmək məqsədilə yaradılmışdır.",
-    "p2": "Mərkəzimizin missiyası hər uşağın gizli potensialını üzə çıxarmaq, ailələrə praktiki dəstək vermək və uşaqların müstəqil, xoşbəxt həyat sürməsi üçün lazımi bacarıqları inkişaf etdirməkdir.",
-    "p3": "Komandamız ən müasir elmi metodlar və fərdi yanaşma prinsipləri əsasında çalışır. Hər uşaq üçün ayrıca hazırlanmış proqram sayəsində nəticələr daha tez və davamlı olur."
+    "title": "UÅaÄÄ±nÄ±zÄ±n potensialÄ±nÄ±",
+    "titleSpan": "birlikdÉ aÃ§aq",
+    "subtitle": "United Center-dÉ hÉr uÅaq xÃ¼susidir. Autizm dÉstÉyi, nitq terapiyasÄ±, psixoloji yardÄ±m vÉ fÉrdi inkiÅaf proqramlarÄ± ilÉ yanÄ±nÄ±zdayÄ±q."
   },
   "stats": {
     "children": "100",
@@ -30,117 +25,141 @@
   },
   "team": [
     {
-      "name": "Dr. Aynur Məmmədova",
-      "role": "Baş Psixoloq",
-      "desc": "Uşaq psixologiyası üzrə 10 il təcrübəsi. ABA metodologiyasında sertifikatlı.",
+      "name": "Dr. Aynur MÉmmÉdova",
+      "role": "BaÅ Psixoloq",
+      "desc": "UÅaq psixologiyasÄ± Ã¼zrÉ 10 il tÉcrÃ¼bÉsi. ABA metodologiyasÄ±nda sertifikatlÄ±.",
       "initials": "AM",
       "color1": "#17B8A6",
       "color2": "#0fa090"
     },
     {
-      "name": "Gülnar Əliyeva",
+      "name": "GÃ¼lnar Æliyeva",
       "role": "Nitq Terapevti / Loqoped",
-      "desc": "Nitq pozuntuları və autizmlə əlaqəli kommunikasiya çətinliklərini aradan qaldırır.",
-      "initials": "GƏ",
+      "desc": "Nitq pozuntularÄ± vÉ autizmlÉ ÉlaqÉli kommunikasiya Ã§ÉtinliklÉrini aradan qaldÄ±rÄ±r.",
+      "initials": "GÆ",
       "color1": "#4CAF50",
       "color2": "#388e3c"
     },
     {
-      "name": "Nigar Hüseynova",
-      "role": "Xüsusi Müəllim",
-      "desc": "Xüsusi təhsil ehtiyacı olan uşaqlar üçün fərdi öyrənmə proqramları hazırlayır.",
+      "name": "Nigar HÃ¼seynova",
+      "role": "XÃ¼susi MÃ¼Éllim",
+      "desc": "XÃ¼susi tÉhsil ehtiyacÄ± olan uÅaqlar Ã¼Ã§Ã¼n fÉrdi Ã¶yrÉnmÉ proqramlarÄ± hazÄ±rlayÄ±r.",
       "initials": "NH",
       "color1": "#f6a800",
       "color2": "#e69400"
     },
     {
       "name": "Rauf Quliyev",
-      "role": "Davranış Mütəxəssisi",
-      "desc": "ABA əsaslı davranış terapiyası üzrə BCBA sertifikatlı. Müsbət davranış dəstəyi.",
+      "role": "DavranÄ±Å MÃ¼tÉxÉssisi",
+      "desc": "ABA ÉsaslÄ± davranÄ±Å terapiyasÄ± Ã¼zrÉ BCBA sertifikatlÄ±. MÃ¼sbÉt davranÄ±Å dÉstÉyi.",
       "initials": "RQ",
       "color1": "#7c3aed",
       "color2": "#5b21b6"
     },
     {
-      "name": "Sevinc İsmayılova",
-      "role": "Uşaq İnkişaf Mütəxəssisi",
-      "desc": "Erkən uşaqlıq inkişafı üzrə ixtisaslaşmış. Oyun terapiyası və motor inkişaf.",
-      "initials": "Sİ",
+      "name": "Sevinc Ä°smayÄ±lova",
+      "role": "UÅaq Ä°nkiÅaf MÃ¼tÉxÉssisi",
+      "desc": "ErkÉn uÅaqlÄ±q inkiÅafÄ± Ã¼zrÉ ixtisaslaÅmÄ±Å. Oyun terapiyasÄ± vÉ motor inkiÅaf.",
+      "initials": "SÄ°",
       "color1": "#ec4899",
       "color2": "#be185d"
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "Leyla Hüseynova",
-      "info": "4 yaşlı Əlinin anası",
-      "initials": "LH",
-      "color": "#17B8A6",
-      "text": "Oğlum 3 yaşında United Center-ə gəldi. İlk gün bir kəlmə belə danışmırdı. 8 aylıq nitq terapiyasından sonra artıq cümlə qurur, dostları ilə oynayır. Bu möcüzəni yaradanlara sonsuz minnətdaram.",
-      "stars": 5
     },
     {
-      "name": "Nərmin Məmmədzadə",
-      "info": "5 yaşlı Günayın anası",
-      "initials": "NM",
-      "color": "#4CAF50",
-      "text": "Qızımın autizm diaqnozu aldığında çox çaşdıq. United Center-dəki komanda bizi saatlarla dinlədi, izah etdi, plan hazırladı. İndi qızım məktəbə hazırdır. Bu nailiyyəti ailə kimi birlikdə qazandıq.",
-      "stars": 5
+      "name": "Umid Babazade",
+      "role": "Dr",
+      "desc": "Travmatoloq",
+      "initials": "UB",
+      "color1": "#17B8A6",
+      "color2": "#0fa090"
     },
     {
-      "name": "Rauf Əliyev",
-      "info": "6 yaşlı Turanın atası",
-      "initials": "RƏ",
-      "color": "#7c3aed",
-      "text": "Valideyn konsultasiyaları sayəsində evdə də terapiyanı davam etdirə bildim. Mütəxəssislər həmişə əlçatandır, suallarıma anında cavab verirlər. United Center sadəcə mərkəz deyil – ailənin bir hissəsidir.",
-      "stars": 5
+      "name": "",
+      "role": "",
+      "desc": "",
+      "initials": "",
+      "color1": "#17B8A6",
+      "color2": "#0fa090"
     }
   ],
   "services": [
     {
-      "icon": "🧩",
-      "name": "Autizm Dəstəyi",
-      "desc": "Autizm spektr pozuntusu olan uşaqlar üçün fərdiləşdirilmiş rehabilitasiya proqramları. Erkən müdaxilə ilə daha sürətli nəticə."
+      "icon": "ð§©",
+      "name": "Autizm DÉstÉyi",
+      "desc": "Autizm spektr pozuntusu olan uÅaqlar Ã¼Ã§Ã¼n fÉrdilÉÅdirilmiÅ rehabilitasiya proqramlarÄ±. ErkÉn mÃ¼daxilÉ ilÉ daha sÃ¼rÉtli nÉticÉ."
     },
     {
-      "icon": "🗣️",
-      "name": "Nitq Terapiyası",
-      "desc": "Peşəkar loqoped mütəxəssislərimiz ilə nitq inkişafı, dil bacarıqları və ünsiyyət qabiliyyətinin gücləndirilməsi."
+      "icon": "ð£ï¸",
+      "name": "Nitq TerapiyasÄ±",
+      "desc": "PeÅÉkar loqoped mÃ¼tÉxÉssislÉrimiz ilÉ nitq inkiÅafÄ±, dil bacarÄ±qlarÄ± vÉ Ã¼nsiyyÉt qabiliyyÉtinin gÃ¼clÉndirilmÉsi."
     },
     {
-      "icon": "🧠",
-      "name": "Psixoloji Dəstək",
-      "desc": "Uşaq psixoloqlarımız tərəfindən emosional inkişaf, davranış tənzimlənməsi və sosial bacarıqların formalaşdırılması."
+      "icon": "ð§",
+      "name": "Psixoloji DÉstÉk",
+      "desc": "UÅaq psixoloqlarÄ±mÄ±z tÉrÉfindÉn emosional inkiÅaf, davranÄ±Å tÉnzimlÉnmÉsi vÉ sosial bacarÄ±qlarÄ±n formalaÅdÄ±rÄ±lmasÄ±."
     },
     {
-      "icon": "📚",
-      "name": "Xüsusi Təhsil",
-      "desc": "Hər uşağın öyrənmə tempinə uyğun fərdi öyrənmə planları ilə akademik və kognitiv inkişafın dəstəklənməsi."
+      "icon": "ð",
+      "name": "XÃ¼susi TÉhsil",
+      "desc": "HÉr uÅaÄÄ±n Ã¶yrÉnmÉ tempinÉ uyÄun fÉrdi Ã¶yrÉnmÉ planlarÄ± ilÉ akademik vÉ kognitiv inkiÅafÄ±n dÉstÉklÉnmÉsi."
     },
     {
-      "icon": "🌱",
-      "name": "Uşaq İnkişafı",
-      "desc": "Motor bacarıqlar, oyun terapiyası və həyat bacarıqlarını əhatə edən kompleks inkişaf proqramları."
+      "icon": "ð±",
+      "name": "UÅaq Ä°nkiÅafÄ±",
+      "desc": "Motor bacarÄ±qlar, oyun terapiyasÄ± vÉ hÉyat bacarÄ±qlarÄ±nÄ± ÉhatÉ edÉn kompleks inkiÅaf proqramlarÄ±."
     },
     {
-      "icon": "🎯",
-      "name": "Davranış Terapiyası",
-      "desc": "ABA (Tətbiqi Davranış Analizi) əsaslı yanaşma ilə istənilmayan davranışların azaldılması, müsbət davranışların möhkəmləndirilməsi."
+      "icon": "ð¯",
+      "name": "DavranÄ±Å TerapiyasÄ±",
+      "desc": "ABA (TÉtbiqi DavranÄ±Å Analizi) ÉsaslÄ± yanaÅma ilÉ istÉnilmayan davranÄ±ÅlarÄ±n azaldÄ±lmasÄ±, mÃ¼sbÉt davranÄ±ÅlarÄ±n mÃ¶hkÉmlÉndirilmÉsi."
     },
     {
-      "icon": "🤲",
-      "name": "Sensor İnteqrasiya",
-      "desc": "Hiss sisteminin inkişafını dəstəkləyən terapiya ilə toxunma, hərəkət və proprioseptiv sistemin harmoniyası."
+      "icon": "ð¤²",
+      "name": "Sensor Ä°nteqrasiya",
+      "desc": "Hiss sisteminin inkiÅafÄ±nÄ± dÉstÉklÉyÉn terapiya ilÉ toxunma, hÉrÉkÉt vÉ proprioseptiv sistemin harmoniyasÄ±."
     },
     {
-      "icon": "👨‍👩‍👧",
-      "name": "Valideyn Konsultasiyası",
-      "desc": "Evdə terapiyanı davam etdirmək üçün valideynlərə strateji məsləhətlər, aylıq irəliləyiş müzakirəsi."
+      "icon": "ð¨âð©âð§",
+      "name": "Valideyn KonsultasiyasÄ±",
+      "desc": "EvdÉ terapiyanÄ± davam etdirmÉk Ã¼Ã§Ã¼n valideynlÉrÉ strateji mÉslÉhÉtlÉr, aylÄ±q irÉlilÉyiÅ mÃ¼zakirÉsi."
     },
     {
-      "icon": "📋",
-      "name": "Fərdi Proqramlar",
-      "desc": "Qiymətləndirmə nəticəsinə əsasən hər uşaq üçün hazırlanmış xüsusi inkişaf planı – unikal, ölçülmüş, effektiv."
+      "icon": "ð",
+      "name": "FÉrdi Proqramlar",
+      "desc": "QiymÉtlÉndirmÉ nÉticÉsinÉ ÉsasÉn hÉr uÅaq Ã¼Ã§Ã¼n hazÄ±rlanmÄ±Å xÃ¼susi inkiÅaf planÄ± â unikal, Ã¶lÃ§Ã¼lmÃ¼Å, effektiv."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Leyla HÃ¼seynova",
+      "info": "4 yaÅlÄ± Ælinin anasÄ±",
+      "initials": "LH",
+      "color": "#17B8A6",
+      "text": "OÄlum 3 yaÅÄ±nda United Center-É gÉldi. Ä°lk gÃ¼n bir kÉlmÉ belÉ danÄ±ÅmÄ±rdÄ±. 8 aylÄ±q nitq terapiyasÄ±ndan sonra artÄ±q cÃ¼mlÉ qurur, dostlarÄ± ilÉ oynayÄ±r. Bu mÃ¶cÃ¼zÉni yaradanlara sonsuz minnÉtdaram.",
+      "stars": 5
+    },
+    {
+      "name": "NÉrmin MÉmmÉdzadÉ",
+      "info": "5 yaÅlÄ± GÃ¼nayÄ±n anasÄ±",
+      "initials": "NM",
+      "color": "#4CAF50",
+      "text": "QÄ±zÄ±mÄ±n autizm diaqnozu aldÄ±ÄÄ±nda Ã§ox Ã§aÅdÄ±q. United Center-dÉki komanda bizi saatlarla dinlÉdi, izah etdi, plan hazÄ±rladÄ±. Ä°ndi qÄ±zÄ±m mÉktÉbÉ hazÄ±rdÄ±r. Bu nailiyyÉti ailÉ kimi birlikdÉ qazandÄ±q.",
+      "stars": 5
+    },
+    {
+      "name": "Rauf Æliyev",
+      "info": "6 yaÅlÄ± TuranÄ±n atasÄ±",
+      "initials": "RÆ",
+      "color": "#7c3aed",
+      "text": "Valideyn konsultasiyalarÄ± sayÉsindÉ evdÉ dÉ terapiyanÄ± davam etdirÉ bildim. MÃ¼tÉxÉssislÉr hÉmiÅÉ ÉlÃ§atandÄ±r, suallarÄ±ma anÄ±nda cavab verirlÉr. United Center sadÉcÉ mÉrkÉz deyil â ailÉnin bir hissÉsidir.",
+      "stars": 5
+    },
+    {
+      "name": "",
+      "info": "",
+      "initials": "",
+      "color": "#17B8A6",
+      "text": "",
+      "stars": 5
     }
   ]
 }
