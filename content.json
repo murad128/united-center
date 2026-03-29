@@ -63,6 +63,14 @@
       "initials": "Sİ",
       "color1": "",
       "color2": ""
+    },
+    {
+      "name": "Umid Babazade",
+      "role": "Psixoloq",
+      "desc": "",
+      "initials": "UB",
+      "color1": "#17B8A6",
+      "color2": "#0fa090"
     }
   ],
   "services": [
