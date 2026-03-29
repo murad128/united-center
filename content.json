@@ -1,0 +1,146 @@
+{
+  "contact": {
+    "phone": "+994 50 204 64 30",
+    "phoneRaw": "+994502046430",
+    "address": "Səttar Bəhlulzadə 157",
+    "whatsapp": "994502046430",
+    "email": "info@unitedcenter.az",
+    "hoursWeekday": "09:00 – 18:00",
+    "hoursSaturday": "09:00 – 14:00"
+  },
+  "hero": {
+    "title": "Uşağınızın potensialını",
+    "titleSpan": "birlikdə açaq",
+    "subtitle": "United Center-də hər uşaq xüsusidir. Autizm dəstəyi, nitq terapiyası, psixoloji yardım və fərdi inkişaf proqramları ilə yanınızdayıq."
+  },
+  "about": {
+    "p1": "United Center Reabilitasiya və İnkişaf Mərkəzi, autizm spektr pozuntusu olan uşaqlar da daxil olmaqla, müxtəlif inkişaf ehtiyacları olan uşaqlara hərtərəfli dəstək göstərmək məqsədilə yaradılmışdır.",
+    "p2": "Mərkəzimizin missiyası hər uşağın gizli potensialını üzə çıxarmaq, ailələrə praktiki dəstək vermək və uşaqların müstəqil, xoşbəxt həyat sürməsi üçün lazımi bacarıqları inkişaf etdirməkdir.",
+    "p3": "Komandamız ən müasir elmi metodlar və fərdi yanaşma prinsipləri əsasında çalışır. Hər uşaq üçün ayrıca hazırlanmış proqram sayəsində nəticələr daha tez və davamlı olur."
+  },
+  "stats": {
+    "children": "100",
+    "childrenSuffix": "+",
+    "experience": "5",
+    "experienceSuffix": "+",
+    "specialists": "8",
+    "specialistsSuffix": "+",
+    "satisfaction": "95",
+    "satisfactionSuffix": "%"
+  },
+  "team": [
+    {
+      "name": "Dr. Aynur Məmmədova",
+      "role": "Baş Psixoloq",
+      "desc": "Uşaq psixologiyası üzrə 10 il təcrübəsi. ABA metodologiyasında sertifikatlı.",
+      "initials": "AM",
+      "color1": "#17B8A6",
+      "color2": "#0fa090"
+    },
+    {
+      "name": "Gülnar Əliyeva",
+      "role": "Nitq Terapevti / Loqoped",
+      "desc": "Nitq pozuntuları və autizmlə əlaqəli kommunikasiya çətinliklərini aradan qaldırır.",
+      "initials": "GƏ",
+      "color1": "#4CAF50",
+      "color2": "#388e3c"
+    },
+    {
+      "name": "Nigar Hüseynova",
+      "role": "Xüsusi Müəllim",
+      "desc": "Xüsusi təhsil ehtiyacı olan uşaqlar üçün fərdi öyrənmə proqramları hazırlayır.",
+      "initials": "NH",
+      "color1": "#f6a800",
+      "color2": "#e69400"
+    },
+    {
+      "name": "Rauf Quliyev",
+      "role": "Davranış Mütəxəssisi",
+      "desc": "ABA əsaslı davranış terapiyası üzrə BCBA sertifikatlı. Müsbət davranış dəstəyi.",
+      "initials": "RQ",
+      "color1": "#7c3aed",
+      "color2": "#5b21b6"
+    },
+    {
+      "name": "Sevinc İsmayılova",
+      "role": "Uşaq İnkişaf Mütəxəssisi",
+      "desc": "Erkən uşaqlıq inkişafı üzrə ixtisaslaşmış. Oyun terapiyası və motor inkişaf.",
+      "initials": "Sİ",
+      "color1": "#ec4899",
+      "color2": "#be185d"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Leyla Hüseynova",
+      "info": "4 yaşlı Əlinin anası",
+      "initials": "LH",
+      "color": "#17B8A6",
+      "text": "Oğlum 3 yaşında United Center-ə gəldi. İlk gün bir kəlmə belə danışmırdı. 8 aylıq nitq terapiyasından sonra artıq cümlə qurur, dostları ilə oynayır. Bu möcüzəni yaradanlara sonsuz minnətdaram.",
+      "stars": 5
+    },
+    {
+      "name": "Nərmin Məmmədzadə",
+      "info": "5 yaşlı Günayın anası",
+      "initials": "NM",
+      "color": "#4CAF50",
+      "text": "Qızımın autizm diaqnozu aldığında çox çaşdıq. United Center-dəki komanda bizi saatlarla dinlədi, izah etdi, plan hazırladı. İndi qızım məktəbə hazırdır. Bu nailiyyəti ailə kimi birlikdə qazandıq.",
+      "stars": 5
+    },
+    {
+      "name": "Rauf Əliyev",
+      "info": "6 yaşlı Turanın atası",
+      "initials": "RƏ",
+      "color": "#7c3aed",
+      "text": "Valideyn konsultasiyaları sayəsində evdə də terapiyanı davam etdirə bildim. Mütəxəssislər həmişə əlçatandır, suallarıma anında cavab verirlər. United Center sadəcə mərkəz deyil – ailənin bir hissəsidir.",
+      "stars": 5
+    }
+  ],
+  "services": [
+    {
+      "icon": "🧩",
+      "name": "Autizm Dəstəyi",
+      "desc": "Autizm spektr pozuntusu olan uşaqlar üçün fərdiləşdirilmiş rehabilitasiya proqramları. Erkən müdaxilə ilə daha sürətli nəticə."
+    },
+    {
+      "icon": "🗣️",
+      "name": "Nitq Terapiyası",
+      "desc": "Peşəkar loqoped mütəxəssislərimiz ilə nitq inkişafı, dil bacarıqları və ünsiyyət qabiliyyətinin gücləndirilməsi."
+    },
+    {
+      "icon": "🧠",
+      "name": "Psixoloji Dəstək",
+      "desc": "Uşaq psixoloqlarımız tərəfindən emosional inkişaf, davranış tənzimlənməsi və sosial bacarıqların formalaşdırılması."
+    },
+    {
+      "icon": "📚",
+      "name": "Xüsusi Təhsil",
+      "desc": "Hər uşağın öyrənmə tempinə uyğun fərdi öyrənmə planları ilə akademik və kognitiv inkişafın dəstəklənməsi."
+    },
+    {
+      "icon": "🌱",
+      "name": "Uşaq İnkişafı",
+      "desc": "Motor bacarıqlar, oyun terapiyası və həyat bacarıqlarını əhatə edən kompleks inkişaf proqramları."
+    },
+    {
+      "icon": "🎯",
+      "name": "Davranış Terapiyası",
+      "desc": "ABA (Tətbiqi Davranış Analizi) əsaslı yanaşma ilə istənilmayan davranışların azaldılması, müsbət davranışların möhkəmləndirilməsi."
+    },
+    {
+      "icon": "🤲",
+      "name": "Sensor İnteqrasiya",
+      "desc": "Hiss sisteminin inkişafını dəstəkləyən terapiya ilə toxunma, hərəkət və proprioseptiv sistemin harmoniyası."
+    },
+    {
+      "icon": "👨‍👩‍👧",
+      "name": "Valideyn Konsultasiyası",
+      "desc": "Evdə terapiyanı davam etdirmək üçün valideynlərə strateji məsləhətlər, aylıq irəliləyiş müzakirəsi."
+    },
+    {
+      "icon": "📋",
+      "name": "Fərdi Proqramlar",
+      "desc": "Qiymətləndirmə nəticəsinə əsasən hər uşaq üçün hazırlanmış xüsusi inkişaf planı – unikal, ölçülmüş, effektiv."
+    }
+  ]
+}

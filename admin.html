@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Center — Admin Panel</title>
+  <!--
+    ⚠️ SECURITY WARNING ⚠️
+    This file contains a GitHub API token with write access to the repository.
+    DO NOT share this file publicly, commit it to a public repo, or distribute it.
+    It is intended for private/local use only.
+    If the token is compromised, revoke it immediately at: https://github.com/settings/tokens
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --bg3: #21262d;
+      --border: #30363d;
+      --teal: #17B8A6;
+      --teal-dark: #12a090;
+      --teal-light: rgba(23,184,166,0.12);
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --danger: #f85149;
+      --success: #3fb950;
+      --warning: #d29922;
+      --radius: 10px;
+      --radius-sm: 6px;
+    }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── LOGIN ── */
+    #loginScreen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #0f3460 100%);
+    }
+    .login-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .login-logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .login-logo span { color: var(--teal); }
+    .login-subtitle { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 28px; }
+    .login-card label { display: block; text-align: left; font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .login-card input[type="password"] {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 16px;
+    }
+    .login-card input[type="password"]:focus { border-color: var(--teal); }
+    #loginError { color: var(--danger); font-size: 0.85rem; margin-bottom: 12px; display: none; }
+    .btn-login {
+      width: 100%;
+      padding: 13px;
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-login:hover { background: var(--teal-dark); }
+
+    /* ── ADMIN LAYOUT ── */
+    #adminScreen { display: none; }
+    .admin-header {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-logo { font-size: 1.1rem; font-weight: 900; }
+    .admin-logo span { color: var(--teal); }
+    .admin-header-right { display: flex; align-items: center; gap: 12px; }
+    .btn-logout {
+      padding: 7px 16px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover { border-color: var(--danger); color: var(--danger); }
+    .admin-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* ── TABS ── */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 6px;
+    }
+    .tab-btn {
+      padding: 8px 14px;
+      background: transparent;
+      border: none;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); background: var(--bg3); }
+    .tab-btn.active { background: var(--teal); color: #fff; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── CARDS / FIELDS ── */
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .card-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .field-group { margin-bottom: 14px; }
+    .field-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 5px; }
+    .field-group input, .field-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field-group input:focus, .field-group textarea:focus { border-color: var(--teal); }
+    .field-group textarea { min-height: 80px; resize: vertical; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+    /* ── LIST ITEMS (team, services, testimonials) ── */
+    .list-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .list-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .list-item-title { font-weight: 700; font-size: 0.92rem; }
+    .list-item-actions { display: flex; gap: 6px; }
+    .btn-icon {
+      width: 30px; height: 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .btn-expand { background: var(--bg2); color: var(--text-muted); }
+    .btn-expand:hover { background: var(--border); color: var(--text); }
+    .btn-delete { background: rgba(248,81,73,0.12); color: var(--danger); }
+    .btn-delete:hover { background: rgba(248,81,73,0.25); }
+    .list-item-fields { display: none; }
+    .list-item-fields.open { display: block; }
+
+    /* ── ADD BUTTON ── */
+    .btn-add {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--teal-light);
+      border: 1px dashed var(--teal);
+      border-radius: var(--radius-sm);
+      color: var(--teal);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      justify-content: center;
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+    .btn-add:hover { background: rgba(23,184,166,0.2); }
+
+    /* ── SAVE SECTION ── */
+    .save-section {
+      position: sticky;
+      bottom: 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 16px;
+      margin: 0 -16px -24px;
+    }
+    .btn-save {
+      width: 100%;
+      padding: 14px;
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-save:hover { background: var(--teal-dark); }
+    .btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
+    #saveMsg {
+      margin-top: 10px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: none;
+    }
+    #saveMsg.success {
+      background: rgba(63,185,80,0.15);
+      border: 1px solid rgba(63,185,80,0.4);
+      color: var(--success);
+    }
+    #saveMsg.error {
+      background: rgba(248,81,73,0.15);
+      border: 1px solid rgba(248,81,73,0.4);
+      color: var(--danger);
+    }
+
+    /* ── COLOR PREVIEW ── */
+    .color-preview {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border-radius: 4px;
+      vertical-align: middle;
+      margin-left: 6px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── STAR SELECTOR ── */
+    .star-select { display: flex; gap: 6px; }
+    .star-btn {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      opacity: 0.3;
+      transition: opacity 0.15s;
+    }
+    .star-btn.active { opacity: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .field-row, .field-row-3 { grid-template-columns: 1fr; }
+      .tabs { gap: 2px; }
+      .tab-btn { font-size: 0.8rem; padding: 7px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════ LOGIN ════════════════════════════ -->
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">United <span>Center</span></div>
+    <div class="login-subtitle">Admin Panel — Daxil olun</div>
+    <label for="adminPass">Şifrə</label>
+    <input type="password" id="adminPass" placeholder="••••••••••" autocomplete="current-password" />
+    <div id="loginError">❌ Şifrə yanlışdır. Yenidən cəhd edin.</div>
+    <button class="btn-login" onclick="doLogin()">Daxil ol</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════ ADMIN ════════════════════════════ -->
+<div id="adminScreen">
+  <header class="admin-header">
+    <div class="admin-logo">United <span>Center</span> <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">Admin</span></div>
+    <div class="admin-header-right">
+      <span id="saveStatus" style="font-size:0.82rem;color:var(--text-muted);"></span>
+      <button class="btn-logout" onclick="doLogout()">Çıxış</button>
+    </div>
+  </header>
+
+  <div class="admin-body">
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('contact', this)">📞 Əlaqə</button>
+      <button class="tab-btn" onclick="switchTab('hero', this)">🏠 Hero</button>
+      <button class="tab-btn" onclick="switchTab('stats', this)">📊 Statistika</button>
+      <button class="tab-btn" onclick="switchTab('team', this)">👥 Komanda</button>
+      <button class="tab-btn" onclick="switchTab('services', this)">🛠 Xidmətlər</button>
+      <button class="tab-btn" onclick="switchTab('testimonials', this)">💬 Rəylər</button>
+    </div>
+
+    <!-- TAB: CONTACT -->
+    <div class="tab-panel active" id="tab-contact">
+      <div class="card">
+        <div class="card-title">📞 Əlaqə Məlumatları</div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Telefon (göstərilən)</label>
+            <input type="text" id="c-phone" placeholder="+994 50 204 64 30" />
+          </div>
+          <div class="field-group">
+            <label>Telefon (raw, linkdə)</label>
+            <input type="text" id="c-phoneRaw" placeholder="+994502046430" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Ünvan</label>
+          <input type="text" id="c-address" placeholder="Səttar Bəhlulzadə 157" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>WhatsApp nömrəsi (rəqəmlər)</label>
+            <input type="text" id="c-whatsapp" placeholder="994502046430" />
+          </div>
+          <div class="field-group">
+            <label>E-poçt</label>
+            <input type="email" id="c-email" placeholder="info@unitedcenter.az" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>İş saatı (həftəiçi)</label>
+            <input type="text" id="c-hoursWeekday" placeholder="09:00 – 18:00" />
+          </div>
+          <div class="field-group">
+            <label>İş saatı (şənbə)</label>
+            <input type="text" id="c-hoursSaturday" placeholder="09:00 – 14:00" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: HERO -->
+    <div class="tab-panel" id="tab-hero">
+      <div class="card">
+        <div class="card-title">🏠 Hero Bölməsi</div>
+        <div class="field-group">
+          <label>Başlıq (birinci hissə)</label>
+          <input type="text" id="h-title" placeholder="Uşağınızın potensialını" />
+        </div>
+        <div class="field-group">
+          <label>Başlıq (rəngli hissə)</label>
+          <input type="text" id="h-titleSpan" placeholder="birlikdə açaq" />
+        </div>
+        <div class="field-group">
+          <label>Alt başlıq / Təsvir</label>
+          <textarea id="h-subtitle" placeholder="United Center-də hər uşaq xüsusidir..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: STATS -->
+    <div class="tab-panel" id="tab-stats">
+      <div class="card">
+        <div class="card-title">📊 Statistika Sayğacları</div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Uşaqlar (rəqəm)</label>
+            <input type="number" id="s-children" placeholder="100" />
+          </div>
+          <div class="field-group">
+            <label>Uşaqlar (suffix)</label>
+            <input type="text" id="s-childrenSuffix" placeholder="+" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>İl Təcrübə (rəqəm)</label>
+            <input type="number" id="s-experience" placeholder="5" />
+          </div>
+          <div class="field-group">
+            <label>İl Təcrübə (suffix)</label>
+            <input type="text" id="s-experienceSuffix" placeholder="+" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Mütəxəssis (rəqəm)</label>
+            <input type="number" id="s-specialists" placeholder="8" />
+          </div>
+          <div class="field-group">
+            <label>Mütəxəssis (suffix)</label>
+            <input type="text" id="s-specialistsSuffix" placeholder="+" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Məmnuniyyət (rəqəm)</label>
+            <input type="number" id="s-satisfaction" placeholder="95" />
+          </div>
+          <div class="field-group">
+            <label>Məmnuniyyət (suffix)</label>
+            <input type="text" id="s-satisfactionSuffix" placeholder="%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: TEAM -->
+    <div class="tab-panel" id="tab-team">
+      <div class="card">
+        <div class="card-title">👥 Komanda Üzvləri</div>
+        <div id="team-list"></div>
+        <button class="btn-add" onclick="addTeamMember()">+ Yeni üzv əlavə et</button>
+      </div>
+    </div>
+
+    <!-- TAB: SERVICES -->
+    <div class="tab-panel" id="tab-services">
+      <div class="card">
+        <div class="card-title">🛠 Xidmətlər</div>
+        <div id="services-list"></div>
+        <button class="btn-add" onclick="addService()">+ Yeni xidmət əlavə et</button>
+      </div>
+    </div>
+
+    <!-- TAB: TESTIMONIALS -->
+    <div class="tab-panel" id="tab-testimonials">
+      <div class="card">
+        <div class="card-title">💬 Rəylər</div>
+        <div id="testimonials-list"></div>
+        <button class="btn-add" onclick="addTestimonial()">+ Yeni rəy əlavə et</button>
+      </div>
+    </div>
+
+    <!-- SAVE -->
+    <div class="save-section">
+      <button class="btn-save" id="saveBtn" onclick="saveContent()">
+        <span id="saveBtnIcon">💾</span> Dəyişiklikləri Saxla
+      </button>
+      <div id="saveMsg"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+// CONFIG
+// ══════════════════════════════════════════════════
+const GITHUB_TOKEN = 'REPLACE_WITH_GITHUB_TOKEN';
+const GITHUB_REPO  = 'murad128/united-center';
+const CONTENT_FILE = 'content.json';
+// SHA-256 of 'Admin12345'
+const PASS_HASH    = 'b327a54c51f48fb5d6e91e7d7a6cd5b4f4c6effd48523c8b3d9dd8a5c5d91d04';
+
+// ══════════════════════════════════════════════════
+// AUTH
+// ══════════════════════════════════════════════════
+async function sha256(msg) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+async function doLogin() {
+  const pass = document.getElementById('adminPass').value;
+  const hash = await sha256(pass);
+  if (hash === PASS_HASH) {
+    sessionStorage.setItem('uc_admin', '1');
+    showAdmin();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('adminPass').value = '';
+    document.getElementById('adminPass').focus();
+  }
+}
+
+document.getElementById('adminPass').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') doLogin();
+});
+
+function doLogout() {
+  sessionStorage.removeItem('uc_admin');
+  location.reload();
+}
+
+function showAdmin() {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('adminScreen').style.display = 'block';
+  loadContent();
+}
+
+// Check session on load
+if (sessionStorage.getItem('uc_admin') === '1') {
+  showAdmin();
+}
+
+// ══════════════════════════════════════════════════
+// TABS
+// ══════════════════════════════════════════════════
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ══════════════════════════════════════════════════
+// LOAD CONTENT
+// ══════════════════════════════════════════════════
+let currentSha = null;
+
+async function loadContent() {
+  try {
+    // Load from GitHub API to get sha for update
+    const res = await fetch(
+      'https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + CONTENT_FILE,
+      { headers: { Authorization: 'token ' + GITHUB_TOKEN, Accept: 'application/vnd.github.v3+json' } }
+    );
+    if (!res.ok) throw new Error('GitHub API: ' + res.status);
+    const data = await res.json();
+    currentSha = data.sha;
+    const content = JSON.parse(atob(data.content.replace(/\n/g,'')));
+    populateForm(content);
+  } catch(err) {
+    // Fallback: load from same origin
+    try {
+      const res = await fetch('content.json?v=' + Date.now());
+      const content = await res.json();
+      populateForm(content);
+      document.getElementById('saveStatus').textContent = '⚠️ GitHub SHA alınmadı — saxlamaq üçün yenidən yükləyin';
+    } catch(e) {
+      showMsg('error', 'Məzmun yüklənə bilmədi: ' + e.message);
+    }
+  }
+}
+
+function populateForm(c) {
+  // Contact
+  setVal('c-phone', c.contact.phone);
+  setVal('c-phoneRaw', c.contact.phoneRaw);
+  setVal('c-address', c.contact.address);
+  setVal('c-whatsapp', c.contact.whatsapp);
+  setVal('c-email', c.contact.email);
+  setVal('c-hoursWeekday', c.contact.hoursWeekday);
+  setVal('c-hoursSaturday', c.contact.hoursSaturday);
+
+  // Hero
+  setVal('h-title', c.hero.title);
+  setVal('h-titleSpan', c.hero.titleSpan);
+  setVal('h-subtitle', c.hero.subtitle);
+
+  // Stats
+  setVal('s-children', c.stats.children);
+  setVal('s-childrenSuffix', c.stats.childrenSuffix);
+  setVal('s-experience', c.stats.experience);
+  setVal('s-experienceSuffix', c.stats.experienceSuffix);
+  setVal('s-specialists', c.stats.specialists);
+  setVal('s-specialistsSuffix', c.stats.specialistsSuffix);
+  setVal('s-satisfaction', c.stats.satisfaction);
+  setVal('s-satisfactionSuffix', c.stats.satisfactionSuffix);
+
+  // Team
+  renderTeam(c.team || []);
+
+  // Services
+  renderServices(c.services || []);
+
+  // Testimonials
+  renderTestimonials(c.testimonials || []);
+}
+
+function setVal(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.value = val || '';
+}
+
+// ══════════════════════════════════════════════════
+// TEAM
+// ══════════════════════════════════════════════════
+function renderTeam(team) {
+  const list = document.getElementById('team-list');
+  list.innerHTML = '';
+  team.forEach((m, i) => list.appendChild(buildTeamItem(m, i)));
+}
+
+function buildTeamItem(m, i) {
+  const div = document.createElement('div');
+  div.className = 'list-item';
+  div.dataset.index = i;
+  div.innerHTML = `
+    <div class="list-item-header">
+      <span class="list-item-title">${escHtml(m.name || 'Yeni üzv')}</span>
+      <div class="list-item-actions">
+        <button class="btn-icon btn-expand" onclick="toggleFields(this)" title="Genişlət">▼</button>
+        <button class="btn-icon btn-delete" onclick="deleteItem('team-list', this)" title="Sil">🗑</button>
+      </div>
+    </div>
+    <div class="list-item-fields">
+      <div class="field-row">
+        <div class="field-group">
+          <label>Ad</label>
+          <input type="text" class="tm-name" value="${escAttr(m.name)}" oninput="updateTitle(this)" />
+        </div>
+        <div class="field-group">
+          <label>Vəzifə</label>
+          <input type="text" class="tm-role" value="${escAttr(m.role)}" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Təsvir</label>
+        <textarea class="tm-desc">${escHtml(m.desc)}</textarea>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Baş hərflər</label>
+          <input type="text" class="tm-initials" maxlength="3" value="${escAttr(m.initials)}" />
+        </div>
+        <div class="field-group">
+          <label>Rəng 1 <span class="color-preview" style="background:${escAttr(m.color1 || '#17B8A6')};" id="cp1-${i}"></span></label>
+          <input type="text" class="tm-color1" value="${escAttr(m.color1)}" oninput="updateColorPreview(this, 'cp1-${i}')" />
+        </div>
+        <div class="field-group">
+          <label>Rəng 2 <span class="color-preview" style="background:${escAttr(m.color2 || '#0fa090')};" id="cp2-${i}"></span></label>
+          <input type="text" class="tm-color2" value="${escAttr(m.color2)}" oninput="updateColorPreview(this, 'cp2-${i}')" />
+        </div>
+      </div>
+    </div>`;
+  return div;
+}
+
+function addTeamMember() {
+  const list = document.getElementById('team-list');
+  const idx = list.children.length;
+  const newMember = { name: '', role: '', desc: '', initials: '', color1: '#17B8A6', color2: '#0fa090' };
+  const item = buildTeamItem(newMember, idx);
+  list.appendChild(item);
+  // Auto-expand
+  const fields = item.querySelector('.list-item-fields');
+  fields.classList.add('open');
+  item.querySelector('.btn-expand').textContent = '▲';
+}
+
+// ══════════════════════════════════════════════════
+// SERVICES
+// ══════════════════════════════════════════════════
+function renderServices(services) {
+  const list = document.getElementById('services-list');
+  list.innerHTML = '';
+  services.forEach((s, i) => list.appendChild(buildServiceItem(s, i)));
+}
+
+function buildServiceItem(s, i) {
+  const div = document.createElement('div');
+  div.className = 'list-item';
+  div.innerHTML = `
+    <div class="list-item-header">
+      <span class="list-item-title">${escHtml(s.icon || '')} ${escHtml(s.name || 'Yeni xidmət')}</span>
+      <div class="list-item-actions">
+        <button class="btn-icon btn-expand" onclick="toggleFields(this)" title="Genişlət">▼</button>
+        <button class="btn-icon btn-delete" onclick="deleteItem('services-list', this)" title="Sil">🗑</button>
+      </div>
+    </div>
+    <div class="list-item-fields">
+      <div class="field-row">
+        <div class="field-group">
+          <label>İkon (emoji)</label>
+          <input type="text" class="sv-icon" value="${escAttr(s.icon)}" oninput="updateTitle(this)" />
+        </div>
+        <div class="field-group">
+          <label>Ad</label>
+          <input type="text" class="sv-name" value="${escAttr(s.name)}" oninput="updateTitle(this)" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Təsvir</label>
+        <textarea class="sv-desc">${escHtml(s.desc)}</textarea>
+      </div>
+    </div>`;
+  return div;
+}
+
+function addService() {
+  const list = document.getElementById('services-list');
+  const item = buildServiceItem({ icon: '', name: '', desc: '' }, list.children.length);
+  list.appendChild(item);
+  const fields = item.querySelector('.list-item-fields');
+  fields.classList.add('open');
+  item.querySelector('.btn-expand').textContent = '▲';
+}
+
+// ══════════════════════════════════════════════════
+// TESTIMONIALS
+// ══════════════════════════════════════════════════
+function renderTestimonials(testimonials) {
+  const list = document.getElementById('testimonials-list');
+  list.innerHTML = '';
+  testimonials.forEach((t, i) => list.appendChild(buildTestimonialItem(t, i)));
+}
+
+function buildTestimonialItem(t, i) {
+  const div = document.createElement('div');
+  div.className = 'list-item';
+  const stars = t.stars || 5;
+  const starBtns = [1,2,3,4,5].map(n =>
+    `<button type="button" class="star-btn ${n <= stars ? 'active' : ''}" data-val="${n}" onclick="setStar(this)">⭐</button>`
+  ).join('');
+  div.innerHTML = `
+    <div class="list-item-header">
+      <span class="list-item-title">${escHtml(t.name || 'Yeni rəy')}</span>
+      <div class="list-item-actions">
+        <button class="btn-icon btn-expand" onclick="toggleFields(this)" title="Genişlət">▼</button>
+        <button class="btn-icon btn-delete" onclick="deleteItem('testimonials-list', this)" title="Sil">🗑</button>
+      </div>
+    </div>
+    <div class="list-item-fields">
+      <div class="field-row">
+        <div class="field-group">
+          <label>Ad Soyad</label>
+          <input type="text" class="ts-name" value="${escAttr(t.name)}" oninput="updateTitle(this)" />
+        </div>
+        <div class="field-group">
+          <label>Məlumat (məs. "4 yaşlı Əlinin anası")</label>
+          <input type="text" class="ts-info" value="${escAttr(t.info)}" />
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Baş hərflər (avatar)</label>
+          <input type="text" class="ts-initials" maxlength="3" value="${escAttr(t.initials)}" />
+        </div>
+        <div class="field-group">
+          <label>Avatar rəngi</label>
+          <input type="text" class="ts-color" value="${escAttr(t.color || '#17B8A6')}" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Rəy mətni</label>
+        <textarea class="ts-text">${escHtml(t.text)}</textarea>
+      </div>
+      <div class="field-group">
+        <label>Ulduz sayı</label>
+        <div class="star-select" data-stars="${stars}">${starBtns}</div>
+      </div>
+    </div>`;
+  return div;
+}
+
+function addTestimonial() {
+  const list = document.getElementById('testimonials-list');
+  const item = buildTestimonialItem({ name: '', info: '', initials: '', color: '#17B8A6', text: '', stars: 5 }, list.children.length);
+  list.appendChild(item);
+  const fields = item.querySelector('.list-item-fields');
+  fields.classList.add('open');
+  item.querySelector('.btn-expand').textContent = '▲';
+}
+
+function setStar(btn) {
+  const val = parseInt(btn.dataset.val);
+  const container = btn.closest('.star-select');
+  container.dataset.stars = val;
+  container.querySelectorAll('.star-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.val) <= val);
+  });
+}
+
+// ══════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════
+function toggleFields(btn) {
+  const fields = btn.closest('.list-item').querySelector('.list-item-fields');
+  const isOpen = fields.classList.toggle('open');
+  btn.textContent = isOpen ? '▲' : '▼';
+}
+
+function deleteItem(listId, btn) {
+  if (confirm('Bu elementi silmək istədiyinizə əminsiniz?')) {
+    btn.closest('.list-item').remove();
+  }
+}
+
+function updateTitle(input) {
+  const item = input.closest('.list-item');
+  const titleEl = item.querySelector('.list-item-title');
+  // For team: use name; for services: icon + name; for testimonials: name
+  const nameEl = item.querySelector('.tm-name, .sv-name, .ts-name');
+  const iconEl = item.querySelector('.sv-icon');
+  if (nameEl) {
+    const txt = (iconEl ? (iconEl.value + ' ') : '') + (nameEl.value || '...');
+    titleEl.textContent = txt;
+  }
+}
+
+function updateColorPreview(input, previewId) {
+  const el = document.getElementById(previewId);
+  if (el) el.style.background = input.value;
+}
+
+function escHtml(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(str) { return escHtml(str); }
+
+// ══════════════════════════════════════════════════
+// COLLECT FORM DATA
+// ══════════════════════════════════════════════════
+function collectContent() {
+  // Team
+  const team = [];
+  document.querySelectorAll('#team-list .list-item').forEach(item => {
+    team.push({
+      name: item.querySelector('.tm-name').value.trim(),
+      role: item.querySelector('.tm-role').value.trim(),
+      desc: item.querySelector('.tm-desc').value.trim(),
+      initials: item.querySelector('.tm-initials').value.trim(),
+      color1: item.querySelector('.tm-color1').value.trim(),
+      color2: item.querySelector('.tm-color2').value.trim()
+    });
+  });
+
+  // Services
+  const services = [];
+  document.querySelectorAll('#services-list .list-item').forEach(item => {
+    services.push({
+      icon: item.querySelector('.sv-icon').value.trim(),
+      name: item.querySelector('.sv-name').value.trim(),
+      desc: item.querySelector('.sv-desc').value.trim()
+    });
+  });
+
+  // Testimonials
+  const testimonials = [];
+  document.querySelectorAll('#testimonials-list .list-item').forEach(item => {
+    testimonials.push({
+      name: item.querySelector('.ts-name').value.trim(),
+      info: item.querySelector('.ts-info').value.trim(),
+      initials: item.querySelector('.ts-initials').value.trim(),
+      color: item.querySelector('.ts-color').value.trim(),
+      text: item.querySelector('.ts-text').value.trim(),
+      stars: parseInt(item.querySelector('.star-select').dataset.stars) || 5
+    });
+  });
+
+  return {
+    contact: {
+      phone: document.getElementById('c-phone').value.trim(),
+      phoneRaw: document.getElementById('c-phoneRaw').value.trim(),
+      address: document.getElementById('c-address').value.trim(),
+      whatsapp: document.getElementById('c-whatsapp').value.trim(),
+      email: document.getElementById('c-email').value.trim(),
+      hoursWeekday: document.getElementById('c-hoursWeekday').value.trim(),
+      hoursSaturday: document.getElementById('c-hoursSaturday').value.trim()
+    },
+    hero: {
+      title: document.getElementById('h-title').value.trim(),
+      titleSpan: document.getElementById('h-titleSpan').value.trim(),
+      subtitle: document.getElementById('h-subtitle').value.trim()
+    },
+    stats: {
+      children: document.getElementById('s-children').value.trim(),
+      childrenSuffix: document.getElementById('s-childrenSuffix').value.trim(),
+      experience: document.getElementById('s-experience').value.trim(),
+      experienceSuffix: document.getElementById('s-experienceSuffix').value.trim(),
+      specialists: document.getElementById('s-specialists').value.trim(),
+      specialistsSuffix: document.getElementById('s-specialistsSuffix').value.trim(),
+      satisfaction: document.getElementById('s-satisfaction').value.trim(),
+      satisfactionSuffix: document.getElementById('s-satisfactionSuffix').value.trim()
+    },
+    team,
+    services,
+    testimonials
+  };
+}
+
+// ══════════════════════════════════════════════════
+// SAVE TO GITHUB
+// ══════════════════════════════════════════════════
+async function saveContent() {
+  const btn = document.getElementById('saveBtn');
+  const icon = document.getElementById('saveBtnIcon');
+  btn.disabled = true;
+  icon.textContent = '⏳';
+  hideMsg();
+
+  const content = collectContent();
+  const jsonStr = JSON.stringify(content, null, 2);
+  const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+
+  try {
+    // Get current SHA if we don't have it
+    if (!currentSha) {
+      const getRes = await fetch(
+        'https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + CONTENT_FILE,
+        { headers: { Authorization: 'token ' + GITHUB_TOKEN, Accept: 'application/vnd.github.v3+json' } }
+      );
+      if (getRes.ok) {
+        const getData = await getRes.json();
+        currentSha = getData.sha;
+      }
+    }
+
+    const body = {
+      message: 'Admin panel: content.json updated',
+      content: encoded
+    };
+    if (currentSha) body.sha = currentSha;
+
+    const res = await fetch(
+      'https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + CONTENT_FILE,
+      {
+        method: 'PUT',
+        headers: {
+          Authorization: 'token ' + GITHUB_TOKEN,
+          Accept: 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      }
+    );
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || 'HTTP ' + res.status);
+    }
+
+    const result = await res.json();
+    currentSha = result.content.sha;
+
+    showMsg('success', '✅ Dəyişikliklər saxlandı! Sayt 1-2 dəqiqə içində yenilənəcək.');
+    document.getElementById('saveStatus').textContent = '✅ Saxlandı ' + new Date().toLocaleTimeString('az');
+
+  } catch(err) {
+    showMsg('error', '❌ Xəta: ' + err.message + '. GitHub API ilə əlaqə qurulamadı.');
+    console.error('Save error:', err);
+  }
+
+  btn.disabled = false;
+  icon.textContent = '💾';
+}
+
+function showMsg(type, text) {
+  const el = document.getElementById('saveMsg');
+  el.className = type;
+  el.textContent = text;
+  el.style.display = 'block';
+  if (type === 'success') {
+    setTimeout(() => { el.style.display = 'none'; }, 8000);
+  }
+}
+
+function hideMsg() {
+  document.getElementById('saveMsg').style.display = 'none';
+}
+</script>
+</body>
+</html>
